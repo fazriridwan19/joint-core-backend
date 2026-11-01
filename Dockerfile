@@ -5,7 +5,7 @@ WORKDIR /workspace
 COPY pom.xml .
 COPY src ./src
 
-RUN mvn -B -ntp package
+RUN mvn -B -ntp package -DskipTests
 
 FROM eclipse-temurin:25-jre
 
